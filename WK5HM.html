@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dynamic page</title>
+    </head>
+    <body background="https://images.pexels.com/photos/11280357/pexels-photo-11280357.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        
+        <h1 id="welcomeMessage"> Welcome to the Bookstore</h1>
+        <p>This is a place where you can make orders for your books</p>
+        <script>
+            const text=document.getElementById("welcomeMessage");
+            text.style.color="Purple";
+            text.style.fontsize="30px"
+        </script>
+        <p id="message">Click the button to order a book !</p>
+        <button id="btn">order Now</button>
+
+        <script>
+          const button = document.getElementById("btn");
+          const message = document.getElementById("message");
+        
+          button.addEventListener("click", () => {
+            message.textContent = "You placed an order!";
+          });
+        </script>
+
+       <p> We are looking for more members to join our  book club.
+         If you are interested, please click the button below:</p>
+        <button id="joinBtn">Join the book Club</button>
+        <ul id="list"></ul>
+        <Script>
+            const joinButton=document.getElementById("joinBtn");
+            const list=document.getElementById("list");
+            joinButton.addEventListener("click",()=>{
+                const newItem=document.createElement("li");
+                newItem.textContent="New Member";
+                list.appendChild(newItem);
+            });
+        </Script>
+        
+    </body>
+</html>
